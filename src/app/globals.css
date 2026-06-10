@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --flux-bg: 10 10 10;
+  --flux-sidebar: 15 15 15;
+  --flux-surface: 20 20 20;
+  --flux-surface-alt: 28 28 28;
+  --flux-border: 42 42 42;
+  --flux-primary: 212 168 67;
+  --flux-text: 240 240 240;
+  --flux-muted: 138 138 138;
+  --flux-danger: 192 57 43;
+  --flux-success: 74 124 89;
+}
+
+* {
+  border-color: rgb(var(--flux-border));
+}
+
+html,
+body {
+  background: rgb(var(--flux-bg));
+  color: rgb(var(--flux-text));
+}
+
+body {
+  min-height: 100vh;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight;
+  }
+}
+
+.flux-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(212, 168, 67, 0.15) 1px, transparent 0);
+  background-size: 22px 22px;
+}

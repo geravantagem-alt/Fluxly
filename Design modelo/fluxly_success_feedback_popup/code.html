@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fluxly - Sucesso</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4a7d59",
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#161c18",
+                        "modal-bg": "#141414",
+                        "modal-border": "#2a2a2a",
+                        "text-main": "#f0f0f0",
+                        "text-muted": "#a1a1a1",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display overflow-hidden">
+<!-- Dashboard Background (Mockup) -->
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between border-b border-modal-border px-10 py-3 bg-background-dark">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-white">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">filter_vintage</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight">Fluxly</h2>
+</div>
+<div class="flex w-64 items-stretch rounded-lg bg-modal-border/50 h-10 px-3">
+<span class="material-symbols-outlined self-center text-text-muted text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full text-white placeholder:text-text-muted" placeholder="Pesquisar áreas..."/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<nav class="flex items-center gap-6">
+<a class="text-text-muted hover:text-white text-sm font-medium transition-colors" href="#">Dashboard</a>
+<a class="text-white text-sm font-medium" href="#">Áreas</a>
+<a class="text-text-muted hover:text-white text-sm font-medium transition-colors" href="#">Relatórios</a>
+</nav>
+<div class="flex gap-2">
+<button class="p-2 rounded-lg bg-modal-border/50 text-white hover:bg-modal-border transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<div class="size-10 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center overflow-hidden">
+<img class="size-full object-cover" data-alt="Avatar do usuário Logado" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCp1FlZcgP0Ua6amv3iWv6UtG-bNd1VimgGFGNsAPHs_moJHt2AyiRmPo7J4mj4Z87UlvEyoqhHdYNOCXMZCwuZbbidbWklE2UMWd47_05Tfled9NrAHhRLEWNENpjUhoHXG3mu8ZngmG2NMoliYOsy9CXuSoWrNJZBc29n3i04wd5axfxYtYLHA47ckJGwxQrDrD9mzI66v1kPRprCw7gRTrdEJWHif4uXEO9jMc6hl3ahj0xEdDcKI6--sjUMLpd3ZNIceJyv5Q"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 p-10 flex flex-col gap-8 opacity-40 grayscale-[0.5]">
+<div class="flex justify-between items-center">
+<h1 class="text-3xl font-bold tracking-tight">Minhas Áreas</h1>
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all">
+                    + Nova Área
+                </button>
+</div>
+<div class="grid grid-cols-3 gap-6">
+<div class="aspect-video bg-modal-border/20 rounded-xl border border-modal-border p-6 flex flex-col justify-between">
+<div>
+<div class="size-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined">forest</span>
+</div>
+<h3 class="font-semibold text-lg">Reserva Central</h3>
+<p class="text-text-muted text-sm mt-1">Última atualização: 2h atrás</p>
+</div>
+<div class="flex -space-x-2">
+<div class="size-8 rounded-full border-2 border-background-dark bg-slate-700"></div>
+<div class="size-8 rounded-full border-2 border-background-dark bg-slate-600"></div>
+</div>
+</div>
+<div class="aspect-video bg-modal-border/20 rounded-xl border border-modal-border p-6 flex flex-col justify-between">
+<div>
+<div class="size-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined">potted_plant</span>
+</div>
+<h3 class="font-semibold text-lg">Viveiro Norte</h3>
+<p class="text-text-muted text-sm mt-1">Última atualização: 5h atrás</p>
+</div>
+<div class="flex -space-x-2">
+<div class="size-8 rounded-full border-2 border-background-dark bg-slate-500"></div>
+</div>
+</div>
+<div class="aspect-video bg-modal-border/10 border-2 border-dashed border-modal-border rounded-xl flex items-center justify-center">
+<span class="text-text-muted text-sm">Espaço vazio</span>
+</div>
+</div>
+</main>
+</div>
+<!-- Modal Backdrop Overlay -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-[2px]">
+<!-- Success Modal Container -->
+<div class="relative w-full max-w-sm overflow-hidden rounded-xl border border-modal-border bg-modal-bg shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform scale-100">
+<!-- Close Button (Top Right) -->
+<button class="absolute top-4 right-4 text-text-muted hover:text-white transition-colors">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+<!-- Modal Content -->
+<div class="flex flex-col items-center p-10 text-center">
+<!-- Moss Green Success Icon -->
+<div class="mb-6 flex size-16 items-center justify-center rounded-2xl bg-primary shadow-[0_0_20px_rgba(74,125,89,0.3)]">
+<span class="material-symbols-outlined text-4xl text-white">check_circle</span>
+</div>
+<!-- Text Feedback -->
+<h2 class="mb-2 text-xl font-semibold tracking-tight text-text-main">
+                    Área criada com sucesso!
+                </h2>
+<p class="mb-8 text-sm leading-relaxed text-text-muted">
+                    Sua nova área já está configurada e disponível no seu painel de controle.
+                </p>
+<!-- Action Button -->
+<button class="w-full rounded-lg bg-primary px-6 py-3 text-sm font-bold tracking-wide text-white transition-all hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50">
+                    Ir para o Painel
+                </button>
+<button class="mt-4 text-xs font-medium text-text-muted hover:text-white transition-colors">
+                    Visualizar detalhes
+                </button>
+</div>
+<!-- Subtle Bottom Accent -->
+<div class="h-1 w-full bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fluxly - Configurações do Proprietário</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d5a944",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1f1c13",
+                        "input-dark": "#0f0f0f",
+                        "border-dark": "#2a2a2a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav {
+            background-color: rgba(213, 169, 68, 0.15);
+            border-right: 3px solid #d5a944;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-200">
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-r border-border-dark bg-background-dark flex flex-col fixed h-full z-10">
+<div class="p-6 flex items-center gap-3">
+<div class="size-10 rounded-lg bg-primary flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined font-bold">bolt</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-white text-xl font-bold tracking-tight">Fluxly</h1>
+<p class="text-primary/70 text-xs font-medium uppercase tracking-wider">Proprietário</p>
+</div>
+</div>
+<nav class="flex-1 px-3 mt-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-sm font-medium">Início</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-sm font-medium">Analíticos</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary bg-primary/10 rounded-lg transition-all border-r-2 border-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">settings</span>
+<span class="text-sm font-semibold">Configurações</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="text-sm font-medium">Suporte</span>
+</a>
+</nav>
+<div class="p-4 border-t border-border-dark mt-auto">
+<div class="flex items-center gap-3 p-2">
+<div class="size-8 rounded-full bg-slate-700 overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Close up professional portrait of a man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXa9k_Zg9RLSLYVyXwVqkRzkZIuWcse0D6GC5wsqMZIu0KannGkicwsIVaKzh_L1WEguQtCBie6AF2ErDd_8KQk1kaQRDu2eQtrJaMlgDqku8q0ZRfOI08WtZxgsXwvpl7khAYQeyBTEu0G57f_hIfxZiw2bVhPYEQkCtCi9_u3nibgSiRdSsAP4yXroFzTsVwTdT1r-un09dreky6g1IuSO4CYvtOdpVwCEuMj_QjHPLze8IyKh6Xdp_1kCBaCN62L7LJHzO7tVE"/>
+</div>
+<div class="flex flex-col overflow-hidden">
+<p class="text-sm font-medium text-white truncate">Ricardo Alvares</p>
+<p class="text-xs text-slate-500 truncate">Sair da conta</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Section -->
+<main class="flex-1 ml-64 p-8 lg:p-12 max-w-5xl">
+<header class="mb-10">
+<h2 class="text-4xl font-black text-white tracking-tight">Configurações</h2>
+<p class="text-slate-400 mt-2">Gerencie suas informações pessoais e os dados da sua organização.</p>
+</header>
+<div class="space-y-12">
+<!-- Section: Meus Dados -->
+<section class="bg-[#16140e] rounded-xl border border-border-dark overflow-hidden">
+<div class="p-6 border-b border-border-dark flex items-center justify-between">
+<div>
+<h3 class="text-xl font-bold text-white">Meus dados</h3>
+<p class="text-sm text-slate-400">Atualize seu perfil pessoal e credenciais de acesso.</p>
+</div>
+<span class="material-symbols-outlined text-primary/40">person</span>
+</div>
+<div class="p-8 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-300 ml-1">Nome Completo</label>
+<input class="w-full bg-input-dark border border-border-dark rounded-lg py-3 px-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-slate-600" placeholder="Ex: Ricardo Alvares" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-300 ml-1">E-mail Profissional</label>
+<input class="w-full bg-input-dark border border-border-dark rounded-lg py-3 px-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-slate-600" placeholder="ricardo@fluxly.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-sm font-semibold text-slate-300 ml-1">Senha</label>
+<div class="relative">
+<input class="w-full bg-input-dark border border-border-dark rounded-lg py-3 px-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all pr-24" type="password" value="••••••••••••"/>
+<button class="absolute right-2 top-1.5 px-3 py-1.5 text-xs font-bold uppercase tracking-tight text-primary hover:bg-primary/10 rounded transition-all">Alterar</button>
+</div>
+<p class="text-[11px] text-slate-500 mt-1 ml-1">Última alteração há 3 meses.</p>
+</div>
+</div>
+<div class="pt-4 flex justify-end">
+<button class="bg-primary hover:bg-primary/90 text-background-dark font-bold py-3 px-8 rounded-lg shadow-lg shadow-primary/10 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">save</span>
+                                Salvar Alterações
+                            </button>
+</div>
+</div>
+</section>
+<!-- Section: Dados da Empresa -->
+<section class="bg-[#16140e] rounded-xl border border-border-dark overflow-hidden">
+<div class="p-6 border-b border-border-dark flex items-center justify-between">
+<div>
+<h3 class="text-xl font-bold text-white">Dados da empresa</h3>
+<p class="text-sm text-slate-400">Informações jurídicas para faturamento e relatórios.</p>
+</div>
+<span class="material-symbols-outlined text-primary/40">corporate_fare</span>
+</div>
+<div class="p-8 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-300 ml-1">Razão Social</label>
+<input class="w-full bg-input-dark border border-border-dark rounded-lg py-3 px-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-slate-600" placeholder="Fluxly Soluções Digitais Ltda" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-300 ml-1">CNPJ</label>
+<input class="w-full bg-input-dark border border-border-dark rounded-lg py-3 px-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-slate-600" placeholder="00.000.000/0001-00" type="text"/>
+</div>
+</div>
+<div class="pt-4 flex justify-end">
+<button class="bg-primary hover:bg-primary/90 text-background-dark font-bold py-3 px-8 rounded-lg shadow-lg shadow-primary/10 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">business_center</span>
+                                Atualizar Empresa
+                            </button>
+</div>
+</div>
+</section>
+<!-- Help Banner -->
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-6 flex flex-col md:flex-row items-center gap-6 justify-between">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<p class="text-white font-bold">Segurança da Conta</p>
+<p class="text-sm text-slate-400">Ative a autenticação de dois fatores para maior proteção.</p>
+</div>
+</div>
+<button class="w-full md:w-auto px-6 py-2 border border-primary text-primary hover:bg-primary hover:text-background-dark font-bold rounded-lg transition-all text-sm">
+                        Configurar 2FA
+                    </button>
+</div>
+</div>
+<footer class="mt-16 pt-8 border-t border-border-dark flex justify-between items-center text-slate-500 text-xs">
+<p>© 2024 Fluxly Dashboard. Todos os direitos reservados.</p>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#">Termos de Uso</a>
+<a class="hover:text-primary transition-colors" href="#">Privacidade</a>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

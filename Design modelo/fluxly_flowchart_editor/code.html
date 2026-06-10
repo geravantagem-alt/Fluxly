@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fluxly Flowchart Editor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d5a944",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0a0a0a",
+                        "surface-dark": "#1c1c1c",
+                        "border-dark": "#2a2a2a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .flow-grid {
+            background-image: radial-gradient(circle, #2a2a2a 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display overflow-hidden">
+<!-- Top Navigation / Breadcrumbs -->
+<header class="h-14 border-b border-border-dark flex items-center px-6 justify-between bg-surface-dark/50 backdrop-blur-sm z-50 relative">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">account_tree</span>
+<span class="font-bold text-lg tracking-tight text-slate-100">Fluxly</span>
+</div>
+<nav class="flex items-center gap-2 text-sm font-medium text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Áreas</a>
+<span class="material-symbols-outlined text-base">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Marketing</a>
+<span class="material-symbols-outlined text-base">chevron_right</span>
+<span class="text-slate-100">Onboarding</span>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="User profile avatar icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxa15kP6fZ4Lzz45c_1D6B9Q20mCReRBxve_8PM5jiSXYkSIIqN10GHt69fUj24OhPbtHSw2Ut-7EoQsKAkWdBb8nELgQCnitjRHYddzWcXy-klaeVpdrMehrxBh8MgZaS0tfOLJ6vr5JNfGnr0AMQO_AnyzzvbHOvtSFxcEEtaX0jXkgVMHcUMPPSxYA1ucBMsfQbWj2bAj1gFpFe9zAI21d1BbCX7vJWIpU4kfM2NOdLR5ULw3ZBUTF-AzA1ZxxvkKuVwrFoVo8"/>
+</div>
+</div>
+</header>
+<main class="flex h-[calc(100vh-3.5rem)] w-full overflow-hidden">
+<!-- Left Panel: Steps Management (30%) -->
+<aside class="w-[30%] min-w-[320px] border-r border-border-dark flex flex-col bg-background-dark">
+<div class="p-6 border-b border-border-dark">
+<h2 class="text-xl font-bold mb-4">Etapas do Processo</h2>
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark font-bold py-2.5 px-4 rounded-lg flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined">add</span>
+                    Nova Etapa
+                </button>
+</div>
+<div class="flex-1 overflow-y-auto scrollbar-hide p-4 space-y-3">
+<!-- Step Item 1 -->
+<div class="group flex items-center justify-between p-3 rounded-lg bg-surface-dark border border-border-dark hover:border-primary/50 transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">01</span>
+<span class="text-sm font-medium">Captura de Lead</span>
+</div>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 hover:text-primary text-slate-500"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="p-1 hover:text-primary text-slate-500 cursor-grab"><span class="material-symbols-outlined text-lg">drag_indicator</span></button>
+<button class="p-1 hover:text-red-400 text-slate-500"><span class="material-symbols-outlined text-lg">delete</span></button>
+</div>
+</div>
+<!-- Step Item 2 -->
+<div class="group flex items-center justify-between p-3 rounded-lg bg-surface-dark border border-border-dark hover:border-primary/50 transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">02</span>
+<span class="text-sm font-medium">E-mail de Boas-vindas</span>
+</div>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 hover:text-primary text-slate-500"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="p-1 hover:text-primary text-slate-500 cursor-grab"><span class="material-symbols-outlined text-lg">drag_indicator</span></button>
+<button class="p-1 hover:text-red-400 text-slate-500"><span class="material-symbols-outlined text-lg">delete</span></button>
+</div>
+</div>
+<!-- Step Item 3 -->
+<div class="group flex items-center justify-between p-3 rounded-lg bg-surface-dark border border-border-dark hover:border-primary/50 transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">03</span>
+<span class="text-sm font-medium">Qualificação de Perfil</span>
+</div>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 hover:text-primary text-slate-500"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="p-1 hover:text-primary text-slate-500 cursor-grab"><span class="material-symbols-outlined text-lg">drag_indicator</span></button>
+<button class="p-1 hover:text-red-400 text-slate-500"><span class="material-symbols-outlined text-lg">delete</span></button>
+</div>
+</div>
+<!-- Step Item 4 -->
+<div class="group flex items-center justify-between p-3 rounded-lg bg-surface-dark border border-border-dark hover:border-primary/50 transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">04</span>
+<span class="text-sm font-medium">Agendamento de Demo</span>
+</div>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 hover:text-primary text-slate-500"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="p-1 hover:text-primary text-slate-500 cursor-grab"><span class="material-symbols-outlined text-lg">drag_indicator</span></button>
+<button class="p-1 hover:text-red-400 text-slate-500"><span class="material-symbols-outlined text-lg">delete</span></button>
+</div>
+</div>
+</div>
+<div class="p-4 bg-surface-dark/30 text-slate-500 text-[10px] uppercase tracking-widest border-t border-border-dark text-center">
+                Editor de Fluxo v2.4.0
+            </div>
+</aside>
+<!-- Right Panel: Visual Editor (70%) -->
+<section class="flex-1 bg-background-dark flow-grid relative overflow-auto p-12">
+<div class="max-w-2xl mx-auto flex flex-col items-center gap-12">
+<!-- Flow Node 1 -->
+<div class="relative w-64 bg-surface-dark border-2 border-primary rounded-xl p-5 shadow-2xl shadow-primary/5">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-background-dark text-[10px] font-bold px-2 py-0.5 rounded uppercase">Início</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">input</span>
+<div class="flex flex-col">
+<h4 class="text-sm font-bold">Captura de Lead</h4>
+<p class="text-xs text-slate-400">Via Landing Page</p>
+</div>
+</div>
+</div>
+<!-- Connector -->
+<div class="relative h-12 w-0.5 bg-border-dark flex items-center justify-center">
+<span class="material-symbols-outlined absolute -bottom-4 text-border-dark">expand_more</span>
+</div>
+<!-- Flow Node 2 -->
+<div class="relative w-64 bg-surface-dark border border-border-dark rounded-xl p-5 hover:border-primary transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400">mail</span>
+<div class="flex flex-col">
+<h4 class="text-sm font-bold">E-mail de Boas-vindas</h4>
+<p class="text-xs text-slate-400">Automação Ativa</p>
+</div>
+</div>
+</div>
+<!-- Connector -->
+<div class="relative h-12 w-0.5 bg-border-dark flex items-center justify-center">
+<span class="material-symbols-outlined absolute -bottom-4 text-border-dark">expand_more</span>
+</div>
+<!-- Flow Node 3 -->
+<div class="relative w-64 bg-surface-dark border border-border-dark rounded-xl p-5 hover:border-primary transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400">check_circle</span>
+<div class="flex flex-col">
+<h4 class="text-sm font-bold">Qualificação de Perfil</h4>
+<p class="text-xs text-slate-400">Filtro de CRM</p>
+</div>
+</div>
+</div>
+<!-- Connector -->
+<div class="relative h-12 w-0.5 bg-border-dark flex items-center justify-center">
+<span class="material-symbols-outlined absolute -bottom-4 text-border-dark">expand_more</span>
+</div>
+<!-- Flow Node 4 -->
+<div class="relative w-64 bg-surface-dark border border-border-dark rounded-xl p-5 hover:border-primary transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400">calendar_month</span>
+<div class="flex flex-col">
+<h4 class="text-sm font-bold">Agendamento de Demo</h4>
+<p class="text-xs text-slate-400">Consultor Senior</p>
+</div>
+</div>
+</div>
+<!-- Add Button -->
+<button class="mt-4 w-10 h-10 rounded-full border border-dashed border-slate-600 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Canvas Tools Overlay -->
+<div class="fixed bottom-8 right-8 flex flex-col gap-3">
+<button class="bg-surface-dark border border-border-dark p-3 rounded-lg shadow-lg text-slate-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined">zoom_in</span>
+</button>
+<button class="bg-surface-dark border border-border-dark p-3 rounded-lg shadow-lg text-slate-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined">zoom_out</span>
+</button>
+<button class="bg-surface-dark border border-border-dark p-3 rounded-lg shadow-lg text-slate-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined">fit_screen</span>
+</button>
+</div>
+</section>
+</main>
+</body></html>

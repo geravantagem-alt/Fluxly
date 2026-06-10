@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fluxly Delete Confirmation Modal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#bf3a2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#1f1413",
+                        "warning-gold": "#f59e0b",
+                        "destructive-muted": "#c0392b",
+                        "neutral-gray": "#8a8a8a"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    keyframes: {
+                        vibrate: {
+                            '0%, 100%': { transform: 'translateX(0)' },
+                            '25%': { transform: 'translateX(-2px)' },
+                            '75%': { transform: 'translateX(2px)' },
+                        }
+                    },
+                    animation: {
+                        vibrate: 'vibrate 0.1s ease-in-out infinite',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .vibrate-on-hover:hover {
+            animation: vibrate 0.1s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex items-center justify-center">
+<!-- Backdrop Overlay -->
+<div class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+<!-- Modal Container -->
+<div class="bg-white dark:bg-slate-900 w-full max-w-md rounded-xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+<!-- Modal Header / Icon Section -->
+<div class="px-6 pt-8 flex flex-col items-center text-center">
+<div class="size-16 rounded-full bg-warning-gold/10 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-warning-gold text-4xl">warning</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight">
+                    Excluir Área
+                </h2>
+</div>
+<!-- Modal Body -->
+<div class="px-8 py-4 text-center">
+<p class="text-neutral-gray dark:text-slate-400 text-base leading-relaxed">
+                    Tem certeza que deseja excluir a área <span class="font-semibold text-slate-900 dark:text-slate-200">[Marketing]</span>? 
+                    Todos os processos, tarefas e dados vinculados serão excluídos permanentemente.
+                </p>
+<p class="mt-4 text-primary font-medium text-sm">
+                    Esta ação não pode ser desfeita.
+                </p>
+</div>
+<!-- Modal Actions -->
+<div class="px-6 py-6 bg-slate-50 dark:bg-slate-800/50 flex flex-col sm:flex-row gap-3">
+<button class="flex-1 px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-semibold text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    Cancelar
+                </button>
+<button class="vibrate-on-hover flex-1 px-4 py-2.5 rounded-lg border-2 border-destructive-muted text-destructive-muted font-bold text-sm bg-transparent hover:bg-destructive-muted/5 transition-colors uppercase tracking-wider">
+                    Excluir
+                </button>
+</div>
+</div>
+</div>
+<!-- Background Content Mock (Blurred out by backdrop) -->
+<div aria-hidden="true" class="layout-container flex h-full grow flex-col opacity-20 pointer-events-none">
+<div class="px-10 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 px-10 py-3">
+<div class="flex items-center gap-4 text-slate-900">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 text-lg font-bold">Fluxly</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<div class="size-10 rounded-full bg-slate-200" data-alt="Abstract profile avatar placeholder"></div>
+</div>
+</header>
+<main class="p-10 space-y-6">
+<div class="h-8 w-48 bg-slate-200 rounded"></div>
+<div class="grid grid-cols-3 gap-6">
+<div class="h-32 bg-slate-100 rounded-xl border border-slate-200"></div>
+<div class="h-32 bg-slate-100 rounded-xl border border-slate-200"></div>
+<div class="h-32 bg-slate-100 rounded-xl border border-slate-200"></div>
+</div>
+<div class="h-64 bg-slate-50 rounded-xl border border-dashed border-slate-300 flex items-center justify-center">
+<div class="text-slate-400">Conteúdo da Área de Marketing</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</body></html>

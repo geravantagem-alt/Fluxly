@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fluxly Dashboard | Áreas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4a843",
+                        "background-dark": "#0a0a0a",
+                        "sidebar-dark": "#0f0f0f",
+                        "surface-dark": "#141414",
+                        "border-dark": "#2a2a2a",
+                        "text-muted": "#8a8a8a",
+                        "text-primary": "#f0f0f0"
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-background-dark text-text-primary antialiased;
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 20;
+            font-size: 20px;
+        }
+        .nav-icon-active {
+            @apply text-primary bg-primary/10;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            @apply bg-transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-border-dark rounded-full;
+        }
+        .card-shadow:hover {
+            box-shadow: 0 0 20px rgba(212, 168, 67, 0.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex overflow-hidden">
+<aside class="w-[64px] flex-shrink-0 flex flex-col border-r border-border-dark bg-sidebar-dark h-screen items-center py-5 z-20">
+<div class="mb-8">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-black shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined !font-bold">account_tree</span>
+</div>
+</div>
+<nav class="flex-1 flex flex-col items-center gap-4 w-full">
+<a class="w-10 h-10 flex items-center justify-center rounded-lg nav-icon-active hover:text-primary transition-all" href="#" title="Áreas">
+<span class="material-symbols-outlined">dashboard</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-lg text-text-muted hover:text-text-primary hover:bg-surface-dark transition-all" href="#" title="Colaboradores">
+<span class="material-symbols-outlined">group</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-lg text-text-muted hover:text-text-primary hover:bg-surface-dark transition-all" href="#" title="Processos">
+<span class="material-symbols-outlined">account_tree</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-lg text-text-muted hover:text-text-primary hover:bg-surface-dark transition-all" href="#" title="Analytics">
+<span class="material-symbols-outlined">analytics</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col items-center gap-5 w-full">
+<a class="w-10 h-10 flex items-center justify-center rounded-lg text-text-muted hover:text-text-primary hover:bg-surface-dark transition-all" href="#" title="Configurações">
+<span class="material-symbols-outlined">settings</span>
+</a>
+<div class="w-8 h-8 rounded-full bg-cover bg-center border border-border-dark" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDslP5efE8stYMt6J8671CAWnGwVlmatyRP5tMYY7NVDA5vI3V7ZZgs_Mg3cnon2X7PXUN0p0zKQZkHwdRPw4DUL5lXCx9fqEYu9Pi2gbQNfn5mMfuZp3HuJ0V-sGPU-dR5sIVnMXvqsy6uVGWaA7s33F0p1nmxm-f_IpRJfrosgzVAa0Q5YC5M301GRFMYMtA68kADZc3Ny2sn78dcTV2hBH-AYBlHnukyLXF2Is7_mSPIUZAugQHOpZ5jdaBQPktlvpROMlFeb-U')"></div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-screen overflow-hidden">
+<header class="h-12 flex items-center justify-between px-6 border-b border-border-dark bg-sidebar-dark shrink-0">
+<div class="flex items-center gap-2 text-[13px]">
+<span class="text-text-muted hover:text-text-primary cursor-pointer transition-colors">Fluxly</span>
+<span class="text-text-muted/40">/</span>
+<span class="text-text-muted hover:text-text-primary cursor-pointer transition-colors">Sena</span>
+<span class="text-text-muted/40">/</span>
+<span class="text-text-primary font-medium tracking-tight">Areas</span>
+</div>
+<div class="flex items-center gap-5">
+<div class="flex items-center gap-4 border-r border-border-dark pr-5">
+<button class="text-text-muted hover:text-text-primary transition-colors text-[13px] font-medium">Feedback</button>
+<button class="text-text-muted hover:text-text-primary transition-all flex items-center">
+<span class="material-symbols-outlined !text-[20px]">search</span>
+</button>
+<button class="text-text-muted hover:text-text-primary transition-all flex items-center">
+<span class="material-symbols-outlined !text-[20px]">help</span>
+</button>
+</div>
+<div class="w-7 h-7 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
+<span class="text-[10px] font-bold text-primary">AS</span>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto px-8 py-10">
+<div class="mb-10">
+<h1 class="text-3xl font-semibold tracking-tight text-text-primary">Areas</h1>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10">
+<div class="flex items-center gap-3 w-full max-w-xl">
+<div class="relative flex-1 group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-muted group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-sidebar-dark border border-border-dark rounded-md py-[7px] pl-10 pr-4 text-[13px] focus:outline-none focus:ring-1 focus:ring-primary/40 focus:border-primary/40 text-text-primary placeholder:text-text-muted transition-all" placeholder="Search for an area" type="text"/>
+</div>
+<div class="relative">
+<button class="flex items-center gap-6 bg-sidebar-dark border border-border-dark rounded-md px-3 py-[7px] text-[13px] text-text-primary hover:bg-surface-dark hover:border-text-muted/30 transition-all">
+<span>Status</span>
+<span class="material-symbols-outlined !text-[18px] text-text-muted">keyboard_arrow_down</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center bg-sidebar-dark border border-border-dark rounded-md p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface-dark text-primary shadow-sm">
+<span class="material-symbols-outlined !text-[18px]">grid_view</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded text-text-muted hover:text-text-primary transition-colors">
+<span class="material-symbols-outlined !text-[18px]">list</span>
+</button>
+</div>
+<button class="flex items-center gap-2 px-4 py-[7px] bg-primary text-black rounded-md font-bold text-[13px] hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined !text-[18px] !font-bold">add</span>
+                    Nova Área
+                </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-surface-dark border border-border-dark rounded-lg flex flex-col card-shadow hover:border-text-muted/40 transition-all group cursor-pointer">
+<div class="p-6 flex-1">
+<div class="flex items-start justify-between mb-4">
+<h3 class="text-base font-bold text-text-primary group-hover:text-primary transition-colors tracking-tight">Suporte Técnico</h3>
+<span class="text-[9px] font-bold px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 tracking-wider">ACTIVE</span>
+</div>
+<p class="text-[13px] text-text-muted leading-relaxed line-clamp-2">Gerenciamento de chamados e infraestrutura tecnológica da unidade Sena.</p>
+</div>
+<div class="px-6 py-4 border-t border-border-dark/60 bg-white/[0.01] flex items-center gap-2 rounded-b-lg">
+<span class="material-symbols-outlined text-primary !text-[18px] fill-[1]">check_circle</span>
+<span class="text-[12px] text-text-muted font-medium">Area is active</span>
+</div>
+</div>
+<div class="bg-surface-dark border border-border-dark rounded-lg flex flex-col card-shadow hover:border-text-muted/40 transition-all group cursor-pointer">
+<div class="p-6 flex-1">
+<div class="flex items-start justify-between mb-4">
+<h3 class="text-base font-bold text-text-primary group-hover:text-primary transition-colors tracking-tight">Recursos Humanos</h3>
+<span class="text-[9px] font-bold px-2 py-0.5 rounded bg-white/5 text-text-muted border border-border-dark tracking-wider">PAUSED</span>
+</div>
+<p class="text-[13px] text-text-muted leading-relaxed line-clamp-2">Processos de recrutamento, seleção e departamento pessoal.</p>
+</div>
+<div class="px-6 py-4 border-t border-border-dark/60 bg-white/[0.01] flex items-center gap-2 rounded-b-lg">
+<span class="material-symbols-outlined text-text-muted !text-[18px]">pause_circle</span>
+<span class="text-[12px] text-text-muted font-medium">Area is paused</span>
+</div>
+</div>
+<div class="bg-surface-dark border border-border-dark rounded-lg flex flex-col card-shadow hover:border-text-muted/40 transition-all group cursor-pointer">
+<div class="p-6 flex-1">
+<div class="flex items-start justify-between mb-4">
+<h3 class="text-base font-bold text-text-primary group-hover:text-primary transition-colors tracking-tight">Financeiro</h3>
+<span class="text-[9px] font-bold px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 tracking-wider">ACTIVE</span>
+</div>
+<p class="text-[13px] text-text-muted leading-relaxed line-clamp-2">Controle de caixa, faturamento e contas a pagar/receber.</p>
+</div>
+<div class="px-6 py-4 border-t border-border-dark/60 bg-white/[0.01] flex items-center gap-2 rounded-b-lg">
+<span class="material-symbols-outlined text-primary !text-[18px] fill-[1]">check_circle</span>
+<span class="text-[12px] text-text-muted font-medium">Area is active</span>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center pb-10">
+<p class="text-[13px] text-text-muted">
+                Precisa de ajuda com a estrutura organizacional? 
+                <a class="text-primary hover:text-primary/80 font-medium underline-offset-4 hover:underline transition-all ml-1" href="#">Acesse a documentação técnica</a>
+</p>
+</div>
+</div>
+</main>
+<div class="fixed bottom-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] pointer-events-none rounded-full translate-x-1/3 translate-y-1/3 z-[-1]"></div>
+
+</body></html>

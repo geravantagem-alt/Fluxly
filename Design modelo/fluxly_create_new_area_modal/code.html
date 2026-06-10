@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fluxly - Nova Área</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d5a944",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0a0a0a",
+                        "modal-bg": "#141414",
+                        "border-muted": "#2a2a2a",
+                        "input-bg": "#0f0f0f"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .backdrop-blur-custom {
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display overflow-hidden">
+<!-- Dashboard Background Mockup (Dimmed) -->
+<div class="fixed inset-0 z-0 flex flex-col opacity-40 select-none pointer-events-none">
+<!-- Sidebar Mockup -->
+<div class="flex h-full w-full">
+<div class="w-64 border-r border-border-muted bg-modal-bg p-6 flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-black font-bold text-xl">F</div>
+<span class="text-xl font-bold tracking-tight">Fluxly</span>
+</div>
+<div class="space-y-4">
+<div class="h-4 w-32 bg-border-muted rounded"></div>
+<div class="h-4 w-24 bg-border-muted rounded"></div>
+<div class="h-4 w-28 bg-border-muted rounded"></div>
+</div>
+</div>
+<!-- Content Mockup -->
+<div class="flex-1 p-10 space-y-8">
+<div class="flex justify-between items-center">
+<div class="h-8 w-48 bg-border-muted rounded"></div>
+<div class="h-10 w-32 bg-border-muted rounded-lg"></div>
+</div>
+<div class="grid grid-cols-3 gap-6">
+<div class="h-40 bg-modal-bg border border-border-muted rounded-xl p-4">
+<div class="h-4 w-24 bg-border-muted rounded mb-4"></div>
+<div class="h-8 w-16 bg-border-muted rounded"></div>
+</div>
+<div class="h-40 bg-modal-bg border border-border-muted rounded-xl p-4">
+<div class="h-4 w-24 bg-border-muted rounded mb-4"></div>
+<div class="h-8 w-16 bg-border-muted rounded"></div>
+</div>
+<div class="h-40 bg-modal-bg border border-border-muted rounded-xl p-4">
+<div class="h-4 w-24 bg-border-muted rounded mb-4"></div>
+<div class="h-8 w-16 bg-border-muted rounded"></div>
+</div>
+</div>
+<div class="h-64 bg-modal-bg border border-border-muted rounded-xl"></div>
+</div>
+</div>
+</div>
+<!-- Modal Backdrop Overlay -->
+<div class="fixed inset-0 z-40 bg-black/60 backdrop-blur-custom flex items-center justify-center p-4">
+<!-- Modal Container -->
+<div class="w-full max-w-[480px] bg-modal-bg border border-border-muted rounded-xl shadow-2xl flex flex-col overflow-hidden">
+<!-- Modal Header -->
+<div class="px-6 pt-6 pb-4 flex items-center justify-between">
+<h2 class="text-xl font-bold text-slate-100">Nova Área</h2>
+<button class="text-slate-400 hover:text-slate-100 transition-colors">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+</div>
+<!-- Modal Content (PageHeading component variation) -->
+<div class="px-6 py-2 flex flex-col gap-5">
+<p class="text-slate-400 text-sm leading-relaxed">
+                    Defina um nome para a sua nova área de trabalho. Áreas ajudam a organizar seus fluxos e equipes.
+                </p>
+<div class="flex flex-col gap-2">
+<label class="text-slate-300 text-sm font-medium" for="area-name">Nome da área
+<div class="relative group">
+<input autofocus="" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-100 focus:outline-0 focus:ring-1 focus:ring-primary border border-border-muted bg-input-bg focus:border-primary h-14 placeholder:text-slate-600 p-[15px] text-base font-normal leading-normal transition-all" id="area-name" placeholder="Ex: Marketing Digital, Desenvolvimento, Vendas..." type="text"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-600 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined">label</span>
+</div>
+</div>
+</label></div>
+<!-- Helper info -->
+<div class="flex items-center gap-3 p-3 bg-primary/5 rounded-lg border border-primary/10">
+<span class="material-symbols-outlined text-primary text-xl">info</span>
+<p class="text-xs text-slate-400">Você poderá alterar o nome da área e adicionar membros posteriormente nas configurações.</p>
+</div>
+</div>
+<!-- Modal Footer (Action Buttons) -->
+<div class="px-6 py-6 mt-2 flex justify-end items-center gap-3">
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-5 border border-border-muted bg-transparent hover:bg-slate-800 text-slate-400 hover:text-slate-200 text-sm font-semibold leading-normal tracking-wide transition-colors">
+<span class="truncate">Cancelar</span>
+</button>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-5 bg-primary hover:bg-primary/90 text-background-dark text-sm font-bold leading-normal tracking-wide transition-all shadow-lg shadow-primary/10 active:scale-95">
+<span class="truncate">Criar Área</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Decorative background element -->
+<div class="fixed top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+<div class="fixed bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+</body></html>

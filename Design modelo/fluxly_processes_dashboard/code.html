@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fluxly Processes Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d5a944",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1f1c13",
+                        "card-dark": "#141414",
+                        "border-dark": "#2a2a2a",
+                        "text-main": "#f0f0f0"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-text-main font-display antialiased">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-20 flex flex-col items-center py-8 border-r border-border-dark bg-background-dark">
+<div class="mb-10">
+<div class="size-10 rounded-lg bg-primary flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined font-bold">bolt</span>
+</div>
+</div>
+<nav class="flex flex-col gap-6 flex-1">
+<a class="p-3 rounded-xl transition-colors text-slate-400 hover:text-primary hover:bg-primary/10" href="#" title="Dashboard">
+<span class="material-symbols-outlined text-2xl">dashboard</span>
+</a>
+<a class="p-3 rounded-xl transition-colors bg-primary/20 text-primary" href="#" title="Areas">
+<span class="material-symbols-outlined text-2xl">account_tree</span>
+</a>
+<a class="p-3 rounded-xl transition-colors text-slate-400 hover:text-primary hover:bg-primary/10" href="#" title="Workflows">
+<span class="material-symbols-outlined text-2xl">rebase_edit</span>
+</a>
+<a class="p-3 rounded-xl transition-colors text-slate-400 hover:text-primary hover:bg-primary/10" href="#" title="Analytics">
+<span class="material-symbols-outlined text-2xl">bar_chart</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-6">
+<a class="p-3 rounded-xl transition-colors text-slate-400 hover:text-primary hover:bg-primary/10" href="#" title="Settings">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</a>
+<div class="size-10 rounded-full bg-slate-800 border border-border-dark overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="User profile circle avatar minimalist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdqyLkTpGAqCE6YxcN5gQic2U2SGY3gh3WoQnywSoHjP--m9Z-_XRKHExJEe8DWIIDRh1h1X4h0cPh5mc8sYFtTy-9KFNwOc7YYypYtMX_oKhY1EjhVjpIK7y-BfqGbHrCHN1e8a_BLJnVy64f9lRgYJxK8HxRFv0Piybec94KObB7Q91UP34uLxCkdLi6tdnHs3grc3HIwPG0Vi6mAbz8U2Y84vJ3hcW2Q_MKIR1u5P4Hi5fZxqm4ltgsvrXs8G8jU5k3Nm3VkTw"/>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col overflow-y-auto bg-background-dark">
+<!-- Header Section -->
+<header class="px-10 pt-8 pb-4">
+<nav class="flex items-center gap-2 text-sm text-slate-500 mb-4">
+<a class="hover:text-primary transition-colors" href="#">Áreas</a>
+<span class="material-symbols-outlined text-xs">arrow_forward_ios</span>
+<span class="text-slate-300">Marketing</span>
+</nav>
+<div class="flex justify-between items-end pb-6 border-b border-border-dark">
+<div>
+<h1 class="text-5xl font-black tracking-tight text-text-main">Marketing</h1>
+<p class="text-slate-500 mt-2">Gerencie e acompanhe todos os fluxos de trabalho da equipe de marketing.</p>
+</div>
+<button class="bg-primary hover:bg-[#c2983b] transition-all flex items-center gap-2 px-6 h-12 rounded-lg text-background-dark font-bold text-sm shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined">add</span>
+                        Novo Processo
+                    </button>
+</div>
+</header>
+<!-- Process Grid -->
+<div class="px-10 py-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Process Card -->
+<div class="group bg-card-dark border border-border-dark p-6 rounded-xl hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between h-48">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">calendar_today</span>
+</div>
+<span class="material-symbols-outlined text-slate-600 group-hover:text-slate-400">more_vert</span>
+</div>
+<h3 class="text-lg font-bold text-text-main group-hover:text-primary transition-colors">Content Calendar</h3>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-xs font-medium px-2 py-1 rounded bg-slate-800 text-slate-400">12 Ativos</span>
+<span class="text-xs text-slate-500">Atualizado há 2h</span>
+</div>
+</div>
+<!-- Process Card -->
+<div class="group bg-card-dark border border-border-dark p-6 rounded-xl hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between h-48">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<span class="material-symbols-outlined text-slate-600 group-hover:text-slate-400">more_vert</span>
+</div>
+<h3 class="text-lg font-bold text-text-main group-hover:text-primary transition-colors">Social Media Approval</h3>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-xs font-medium px-2 py-1 rounded bg-slate-800 text-slate-400">5 Pendentes</span>
+<span class="text-xs text-slate-500">Atualizado há 5h</span>
+</div>
+</div>
+<!-- Process Card -->
+<div class="group bg-card-dark border border-border-dark p-6 rounded-xl hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between h-48">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">filter_alt</span>
+</div>
+<span class="material-symbols-outlined text-slate-600 group-hover:text-slate-400">more_vert</span>
+</div>
+<h3 class="text-lg font-bold text-text-main group-hover:text-primary transition-colors">Lead Nurturing</h3>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-xs font-medium px-2 py-1 rounded bg-green-900/30 text-green-400">Em execução</span>
+<span class="text-xs text-slate-500">Ontem</span>
+</div>
+</div>
+<!-- Process Card -->
+<div class="group bg-card-dark border border-border-dark p-6 rounded-xl hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between h-48">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+<span class="material-symbols-outlined text-slate-600 group-hover:text-slate-400">more_vert</span>
+</div>
+<h3 class="text-lg font-bold text-text-main group-hover:text-primary transition-colors">Campaign Launch</h3>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-xs font-medium px-2 py-1 rounded bg-slate-800 text-slate-400">3 Fases</span>
+<span class="text-xs text-slate-500">Há 3 dias</span>
+</div>
+</div>
+<!-- Process Card -->
+<div class="group bg-card-dark border border-border-dark p-6 rounded-xl hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between h-48">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">diversity_3</span>
+</div>
+<span class="material-symbols-outlined text-slate-600 group-hover:text-slate-400">more_vert</span>
+</div>
+<h3 class="text-lg font-bold text-text-main group-hover:text-primary transition-colors">Influencer Outreach</h3>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-xs font-medium px-2 py-1 rounded bg-slate-800 text-slate-400">8 Contatos</span>
+<span class="text-xs text-slate-500">Há 1 semana</span>
+</div>
+</div>
+<!-- Process Card -->
+<div class="group bg-card-dark border border-border-dark p-6 rounded-xl hover:border-primary/50 transition-all cursor-pointer flex flex-col justify-between h-48">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="material-symbols-outlined text-slate-600 group-hover:text-slate-400">more_vert</span>
+</div>
+<h3 class="text-lg font-bold text-text-main group-hover:text-primary transition-colors">Email Marketing</h3>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-xs font-medium px-2 py-1 rounded bg-slate-800 text-slate-400">Automatizado</span>
+<span class="text-xs text-slate-500">Há 2 semanas</span>
+</div>
+</div>
+<!-- Empty/New Process Placeholder -->
+<div class="group border border-dashed border-border-dark p-6 rounded-xl hover:border-primary transition-all cursor-pointer flex flex-col items-center justify-center h-48 gap-4 bg-background-dark/50">
+<div class="size-12 rounded-full border border-border-dark flex items-center justify-center text-slate-600 group-hover:text-primary group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">add</span>
+</div>
+<p class="text-slate-500 font-medium group-hover:text-primary transition-colors">Criar Novo Fluxo</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
